@@ -33,7 +33,7 @@ Los usuarios deben ser capaces de:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [franciscojoeldev-3-column-card-component.netlify.app](https://franciscojoeldev-3-column-card-component.netlify.app/)
 
 ## My process
 
