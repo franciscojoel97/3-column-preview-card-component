@@ -1,0 +1,128 @@
+/******** VARIABLES **********/
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+/******* GENERALES ********/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* height: 100%; */
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-light-gray);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+/******** PRINCIPAL ********/
+.principal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 780px;
+}
+
+.columna {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/***** Titulos *****/
+.columna .titulo {
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 35px;
+    margin-bottom: .8rem;
+    color: var(--very-light-gray);
+}
+
+/****** Parrafo ******/
+.columna .parrafo {
+    font-size: 14px;
+    line-height: 26px;
+    margin-bottom: 4rem;
+    flex-grow: 1;
+    color: var(--transparent-white);
+}
+
+.sedans {
+    background-color: var(--bright-orange);
+}
+
+.suvs {
+    background-color: var(--dark-cyan);
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+}
+
+.columna:first-of-type {
+    border-radius: .7rem 0 0 .7rem;
+}
+
+.columna:last-of-type {
+    border-radius: 0 .7rem .7rem 0;
+}
+
+/****** Botón ******/
+.enlace {
+    background-color: var(--very-light-gray);
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 12px;
+}
+
+.sedans .enlace {
+    color:hsl(31, 77%, 52%);
+}
+
+.suvs .enlace {
+    color:hsl(184, 100%, 22%);
+}
+
+.luxury .enlace {
+    color:hsl(179, 100%, 13%)
+}
+
+/********** ACTIVE STATE *******/
+.enlace:hover {
+    background-color: transparent;
+    color: var(--transparent-white);
+    border: 1px solid var(--transparent-white);
+}
+
+/******** MEDIA QUERY: RESPONSIVE DESIGN ******/
+@media (max-width: 500px) {
+    .principal {
+        grid-template-columns: 1fr;
+        margin: 2rem;
+    }
+
+    .columna:first-of-type {
+        border-radius: .7rem .7rem 0 0;
+    }
+
+    .columna:last-of-type {
+        border-radius: 0 0 .7rem .7rem;
+    }
+
+    .columna .parrafo {
+        margin-bottom: 2rem;
+    }
+}
